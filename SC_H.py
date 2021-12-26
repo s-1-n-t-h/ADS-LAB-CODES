@@ -24,7 +24,7 @@ def PT():
 
 
 def search(value):
-    if len(HT[HashFn(value)]==0:
+    if len(HT[HashFn(value)]==0):
            print("\n\nValue {} is not found.".format(value))
            return
     for i in HT[HashFn(value)]:
