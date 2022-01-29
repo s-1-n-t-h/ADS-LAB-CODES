@@ -21,14 +21,14 @@ class AVLTree(object):
         
         if b > 1 and key < root.l.value:
             return self.rRotate(root)
-        if b < -1 and key < root.r.value:
+        if b < -1 and key > root.r.value:
             return self.lRotate(root)
         if b > 1 and key > root.l.value:
             root.l = self.lRotate(root.l)
             return self.rRotate(root)
         if b < -1 and key < root.r.value:
             root.r = self.rRotate(root.r)
-            return self.lRoatate(root)
+            return self.lRotate(root)
         return root
     
     def lRotate(self,z):
@@ -77,12 +77,12 @@ if __name__ == "__main__":
     Tree = AVLTree()
     root = None
     
-    root = Tree.insert(root,1)
-    root = Tree.insert(root,2)
+    root = Tree.insert(root,11)
+    root = Tree.insert(root,20)
     root = Tree.insert(root,3)
-    root = Tree.insert(root,4)
-    root = Tree.insert(root,5)
-    root = Tree.insert(root,6)
+    root = Tree.insert(root,44)
+    root = Tree.insert(root,7)
+    root = Tree.insert(root,89)
     
     print("PreOrder Traversal of the constructed AVL Tree is: ",end="")
     Tree.preOrder(root)
