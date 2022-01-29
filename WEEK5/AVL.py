@@ -77,12 +77,12 @@ if __name__ == "__main__":
     Tree = AVLTree()
     root = None
     
-    root = Tree.insert(root,11)
-    root = Tree.insert(root,20)
+    root = Tree.insert(root,1)
+    root = Tree.insert(root,2)
     root = Tree.insert(root,3)
-    root = Tree.insert(root,44)
-    root = Tree.insert(root,7)
-    root = Tree.insert(root,89)
+    root = Tree.insert(root,4)
+    root = Tree.insert(root,5)
+    root = Tree.insert(root,6)
     
     print("PreOrder Traversal of the constructed AVL Tree is: ",end="")
     Tree.preOrder(root)
