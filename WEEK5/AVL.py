@@ -156,7 +156,7 @@ class AVL:
         else: 
             # case 1 - node has n futher children
             # delete the node and return the node as null
-            if not (_root_._left_ and _root_._right_):
+            if (_root_._left_ == None) and (_root_._right_ == None):
                 _root_ = None
                 return _root_
             # case 2 - if node has only 1 child
