@@ -1,7 +1,3 @@
-#This class provides the proper structure for any node in the avl tree
-from calendar import c
-
-
 class Node:
     def __init__(_self_,_value_):
         _self_._value_ = _value_
