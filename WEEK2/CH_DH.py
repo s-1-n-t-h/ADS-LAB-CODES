@@ -12,10 +12,17 @@ while(1):
 
 def CalNxtPrime():
     l = [i for i in range(M-1, 0, -1)]
+    if M-1 == 2:
+        p = 2
+        return
     for i in l:
-        if i % 2 != 0:
+        for j in range(2,M//2+1):
+            if i % j == 0:
+                break
+        else:
             p = i
-            return
+
+
 
 
 def H1(k):
@@ -38,6 +45,9 @@ def insert(value):
         j = 1
         while(HT[i] != -1):
             i = (H1(value)+j*H2(value))%M
+            if(H1(value) == H1(i)):
+                print("\n\nHash Table is Full.")
+                return
             j = j+1
         HT[i] = value
 
@@ -84,6 +94,9 @@ def delete(value):
         j = 1
         while(1):
             i = (H1(value)+j*H2(value))%M
+            if(H1(value) == H1(i)):
+                print("\n\nValue Doesn't Exist.")
+                return
             j = j+1
             if HT[i] == -1:
                 print("\n\nValue {} doesn't exist.".format(value))
