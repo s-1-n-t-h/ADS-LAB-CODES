@@ -1,6 +1,6 @@
 
 while(1):
-    limit = M = int(input("\n\nSize of Hash Table: "))
+    M = int(input("\n\nSize of Hash Table: "))
     HT = [-1 for i in range(M)]
     n = int(input("\n\nNo.of values: "))
 
@@ -28,7 +28,7 @@ def insert(value):
         while(HT[ReHashFn(i)] != -1):
             i = i + 1
             if(ReHashFn(value) == HashFn(i)):
-                print("\n\nHash Table is.")
+                print("\n\nHash Table is Full.")
                 return
         HT[HashFn(i)] = value
 
