@@ -31,11 +31,9 @@ def swap(i,s):
      
 L = list(map(int,input("Elements: ").split(" ")))
 
-#calculate the size of list using -- (L.__sizeof__()/L[0].__sizeof__()) or
 n =  len(L)
 
 print("List or Array reprsentation Before Build-Heap: ",L)
-
 BuildHeap(L)
 print("\n")
 print("List or Array reprsentation After Build-Heap: ",L)

@@ -10,7 +10,7 @@ def heapify(L,i):
     if(l<n and L[l] < L[s]): #checking if left child is smaller than it's parent
         s = l
     
-    if(r<n and L[r]<L[s]): #check if right child is smaller than smallest
+    if(r<n and L[r] < L[s]): #check if right child is smaller than smallest
         s = r
     
     if( s != i): #if smallest is not parent

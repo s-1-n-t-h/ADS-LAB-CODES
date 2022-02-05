@@ -1,12 +1,5 @@
-while(1):
-    M = int(input("\n\nSize of Hash Table: "))
-    HT = [[] for i in range(M)]
-    n = int(input("\n\nNo.of values: "))
-
-    if(n > M):
-        print("\n\nThe Hash Table can't be created.")
-    else:
-        break
+M = int(input("\n\nSize of Hash Table: "))
+HT = [[] for i in range(M)]
 
 
 def HashFn(k):
@@ -24,11 +17,11 @@ def PT():
 
 
 def search(value):
-    if len(HT[HashFn(value)]==0):
+    if len(HT[HashFn(value)])==0:
            print("\n\nValue {} is not found.".format(value))
            return
-    for i in HT[HashFn(value)]:
-        if(i == value):
+    
+    if(value in HT[HashFn(value)]):
             print("\n\nValue {} is found.".format(value))
             return
     else:
@@ -37,11 +30,10 @@ def search(value):
 
 def delete(value):
 
-    for i in HT[HashFn(value)]:
-        if(i == value):
-            print("\n\nValue {} is deleted.".format(value))
-            HT[HashFn(value)].remove(i)
-            return
+    if(value in HT[HashFn(value)]):
+        print("\n\nValue {} is deleted.".format(value))
+        HT[HashFn(value)].remove(i)
+        return
     else:
         print("\n\nValue {} is not found.".format(value))
 

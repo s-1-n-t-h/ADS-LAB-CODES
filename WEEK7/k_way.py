@@ -11,7 +11,7 @@ print("Enter no of arrays: ",end=" ")
 n = int(input())
 sortedList = []
 for i in range(n):
-    print("Input {}st Sorted array: ".format(i+1),end=" ")
+    print("Input Sorted array no {}: ".format(i+1),end=" ")
     sortedList.append(list(map(int, input().split())))
  
 l = mergeK(sortedList,n)
