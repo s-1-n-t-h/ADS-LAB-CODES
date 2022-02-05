@@ -27,6 +27,9 @@ def insert(value):
         i = value
         while(HT[ReHashFn(i)] != -1):
             i = i + 1
+            if(ReHashFn(value) == HashFn(i)):
+                print("\n\nHash Table is.")
+                return
         HT[HashFn(i)] = value
 
 
@@ -65,6 +68,9 @@ def delete(value):
         i = value
         while(1):
             i = i+1
+            if(ReHashFn(value) == HashFn(i)):
+                print("\n\nValue doesn't exist.")
+                return
             if HT[ReHashFn(i)] == -1:
                 print("\n\nValue doesn't exist.")
                 return
