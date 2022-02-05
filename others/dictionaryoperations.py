@@ -28,9 +28,15 @@ def print_d():
     print(d)
 def search():
     x = input("key: ")
+    if x not in d:
+        print("key doesn't exist!")
+        return
     print("value of key",x,"is: ",d[x])
+def copy():
+    d1 = d.copy()
+    return d1
 while True:
-    print("1.insert 2.update 3.delete 4.print 5.search")
+    print("1.insert 2.update 3.delete 4.print 5.search 6.Copy")
     n = int(input("choice: "))
     if n==1:
         insert()
@@ -42,6 +48,8 @@ while True:
         print_d()
     elif n==5:
         search()
+    elif n==6:
+        print("Copy is: ",copy())
     else:
         break
 
