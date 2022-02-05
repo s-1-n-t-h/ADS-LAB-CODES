@@ -8,7 +8,7 @@ def mergeK(arr, k):
     return l
  
 
-sortedList =[[2, 6,],
+sortedList =[[2, 6],
     [ 10,11],
     [23, 34, 90],[7,21,38,93]]
 k = 4
