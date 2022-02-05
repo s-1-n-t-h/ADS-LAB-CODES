@@ -32,7 +32,7 @@ def delete(value):
 
     if(value in HT[HashFn(value)]):
         print("\n\nValue {} is deleted.".format(value))
-        HT[HashFn(value)].remove(i)
+        HT[HashFn(value)].remove(value)
         return
     else:
         print("\n\nValue {} is not found.".format(value))
