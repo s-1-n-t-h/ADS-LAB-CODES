@@ -7,12 +7,13 @@ def mergeK(arr, k):
         l = list(merge(l, arr[i]))
     return l
  
-
-sortedList =[[2, 6],
-    [ 10,11],
-    [23, 34, 90],[7,21,38,93]]
-k = 4
+print("Enter no of arrays: ",end=" ")
+n = int(input())
+sortedList = []
+for i in range(n):
+    print("Input {} array: ".format(i+1),end=" ")
+    sortedList.append(list(map(int, input().split())))
  
-l = mergeK(sortedList, k)
+l = mergeK(sortedList,n)
  
 print(l)
